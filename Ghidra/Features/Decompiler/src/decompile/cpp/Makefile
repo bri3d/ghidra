@@ -28,9 +28,9 @@ endif
 
 ifeq ($(OS),Darwin)
   MAKE_STATIC=
-  ARCH_TYPE=-arch x86_64
+  ARCH_TYPE=-arch m64
   ADDITIONAL_FLAGS=-mmacosx-version-min=10.6 -w
-  OSDIR=osx64
+  OSDIR=aarch64
 endif
 
 CC=gcc

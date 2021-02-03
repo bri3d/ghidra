@@ -65,6 +65,12 @@ public enum Platform {
 	 */
 	MAC_OSX_64(OperatingSystem.MAC_OS_X, Architecture.X86_64, "osx64", ".dylib", ""),
 
+
+	/**
+	 * Identifies a Mac OS X for the Apple Architecture 64-bit platform.
+	 */
+	MAC_OSX_AARCH64(OperatingSystem.MAC_OS_X, Architecture.AARCH64, "aarch64", ".dylib", ""),
+
 	/**
 	 * Identifies a Mac OS, the architecture for which we do not know or have not encountered
 	 */

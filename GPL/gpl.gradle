@@ -6,7 +6,7 @@ project.ext.BIN_REPO = file("../../../ghidra.bin").absolutePath
  * Create a set containing all the platforms we need when building native
  * artifacts.
  ****************************************************************************/
-project.ext.set("OS_NAMES", ["osx64", "win32", "win64", "linux64"])
+project.ext.set("OS_NAMES", ["osx64", "win32", "win64", "linux64", "aarch64"])
 
 /****************************************************************************
  * Establish Visual Studio configuration environment for Windows native builds
@@ -41,6 +41,8 @@ ext.getCurrentPlatformName = {
 	else if (osName.startsWith("Mac OS X")) {
 		if (isX86_64) {
 			return 'osx64'
+		} else {
+			return 'aarch64'
 		}
 	}
 	throw new GradleException("Unrecognized current platform -> osName = $osName, archName = $archName")

@@ -6,7 +6,7 @@
 
 defaultTasks 'assemble'
 
-ext.supportedPlatforms = ['osx64', 'linux64']
+ext.supportedPlatforms = ['osx64', 'linux64', 'aarch64']
 
 ext.binutilsResource = new File("${binutilsLocation}/${binutils}.tar.bz2")
 
@@ -28,6 +28,10 @@ model {
 			operatingSystem 'linux'
 		}
 		osx64 {
+			architecture 'x86_64'
+			operatingSystem 'osx'
+		}
+		aarch64 {
 			architecture 'x86_64'
 			operatingSystem 'osx'
 		}
